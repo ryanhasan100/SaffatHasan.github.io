@@ -5,3 +5,48 @@ contact:
     city: Philadelphia
     state: PA
     zip: 19104
+
+education:
+  gpa: 3.54
+
+experience:
+  - employer: Cigna, Philadelphia, PA
+    title: Software Engineer
+    duration: Apr 2020 - Present
+    summary_items:
+      - Explored cloud architectural patterns to support on-prem and cloud deployments
+      - Created proof of concept leveraging Gloo for centralized network traffic configuration
+      - Lead intern project using TDD and automated deployment patterns with GitOPS
+      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda & EKS, S2I, NodeJS, Angular, Express
+
+  - employer: Lockheed Martin, Moorestown, NJ
+    title: Software Engineer
+    duration: Apr - Sept 2019
+    summary_items:
+      - Transitioned computer program into Git from Clearcase including training and best practices
+      - Incorporated automated testing using Google Test, JUnit, and Maven framework through feature toggles
+      - Reduced build time by decomposing product through discussions about architecture with project leads
+      - Integrated build into Jenkins pipeline to automate deployment, SCA, and testing on every deliverable
+      - \underline{Leveraged knowledge} in Maven, Git, Jenkins, JUnit, Google Test, Java, C++
+
+  - employer: MicroOffice, New York, NY
+    title: Software Developer
+    duration: Feb 2017 - Jan 2019
+    summary_items:
+      - Built contract licensing and management system using PostgreSQL, Python, Flask, and Jinja
+      - Integrated external desk management system with existing operations interface using web API calls
+      - Updated payment portal to allow customers to make purchases independent of sales team
+      - Automated operations visual reporting service to provide useful at-a-glance business metrics
+      - \underline{Leveraged knowledge} in Full Stack Web development, Python, JavaScript, Git, PostgreSQL, Flask
+
+projects:
+  - name: Film Rating Microservice POC
+    duration: June - Aug 2020
+    summary_items:
+      - did some cool stuff
+      - and other things
+      - of some nature
+
+skills:
+  proficient: Java, Python, Unix, Git, SQL, JavaScript, Maven, Flask, Pytest, Pylint, HTML/CSS
+  familiar: C++, C, Docker, LXC, SaltStack, Jenkins, Node.js
