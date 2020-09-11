@@ -13,8 +13,8 @@
 \usepackage[left=0.6in,top=0.5in,right=0.6in,bottom=0.5in]{geometry} 
 
 % Set font face
-\usepackage{fontspec}
-\setmainfont[SmallCapsFeatures={Renderer=Basic},
+% \usepackage{fontspec}
+% \setmainfont[SmallCapsFeatures={Renderer=Basic},
 Ligatures={TeX}]{\mainfontface}
 % Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface} %% NoCommon and NoDiscretionary not available
 
