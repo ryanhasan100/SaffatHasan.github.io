@@ -1,0 +1,114 @@
+
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+% Set applicant's personal data for header
+\name{\VAR{contact.name}}
+\address{\VAR{contact.address.line1} \linebreak \VAR{contact.address.city} \VAR{contact.address.state} \VAR{contact.address.zip}}
+\contacts{(347) 604-5831 \linebreak saffathasan@gmail.com}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+% 	% Print the content
+% 	\begin{cvsection}{Professional Summary}
+% 		\begin{cvsubsection}{}{}{}
+% 		Software Engineer with a passion for developing testable quality software with particular focus on testability and deployability.
+% 		\end{cvsubsection}
+% 	\end{cvsection}
+
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Philadelphia, PA}{Drexel University}{Graduation: Dec 2020}
+			\begin{itemize}
+				\item B.S./M.S. in Computer Science | GPA: 3.54
+				\item Graduate Coursework: 	Test Driven Dev \& eXtreme Prog; Web Services & Mobile Arch; Data Analysis at Scale.
+				\item Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Professional Experience}
+	    \begin{cvsubsection}{Cigna, Philadelphia, PA}{Software Engineer}{Apr 2020 - Present}
+	        \begin{itemize}
+	            \item Explored cloud architectural patterns to support on-prem and cloud deployments
+	            \item Created proof of concept leveraging Gloo for centralized network traffic configuration
+	            \item Lead intern project using TDD and automated deployment patterns with GitOPS
+	            \item \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda & EKS, S2I, NodeJS, Angular, Express
+	        \end{itemize}
+	    \end{cvsubsection}
+		\begin{cvsubsection}{Lockheed Martin, Moorestown, NJ}{Software Engineer}{Apr - Sept 2019}
+			\begin{itemize}
+				\item Transitioned computer program into Git from Clearcase including training and best practices
+				\item Incorporated automated testing using Google Test, JUnit, and Maven framework through feature toggles
+				\item Reduced build time by decomposing product through discussions about architecture with project leads
+                \item Integrated build into Jenkins pipeline to automate deployment, SCA, and testing on every deliverable
+                \item \underline{Leveraged knowledge} in Maven, Git, Jenkins, JUnit, Google Test, Java, C++
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{MicroOffice, New York, NY}{Software Developer}{ Feb 2017 - Jan 2019}
+			\begin{itemize}
+                \item Built contract licensing and management system using PostgreSQL, Python, Flask, and Jinjaz
+                \item Integrated external desk management system with existing operations interface using web API calls
+                \item Updated payment portal to allow customers to make purchases independent of sales team
+                \item Automated operations visual reporting service to provide useful at-a-glance business metrics
+                \item \underline{Leveraged knowledge} in Full Stack Web development, Python, JavaScript, Git, PostgreSQL, Flask
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Software Projects - \url{www.gitlab.com/saffathasan}}
+		\begin{cvsubsection}{Chess Move Validation}{}{June - Aug 2019}
+			\begin{itemize}
+                \item Developed Command-line Interface to display moves for a piece given a board state
+                \item Standardized code quality by using Pylint and pytest for static code analysis and automated testing
+                \item Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
+                \item \underline{Utilized} Gitlab CI, Test-Driven Development, Python, Pylint, Pytest
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{King Me}{}{Jan - June 2019}
+			\begin{itemize}
+			    \item Designed online checkers game using Flask SocketIO to allow players to create and join games
+			    \item Coordinated student team of four by creating mocked interfaces to enable concurrent development
+                \item Emphasized portability by utilizing Docker to standardize runtime environment
+                \item Enforced quality through use of Gitlab CI to automate static code analysis and testing
+                \item \underline{Utilized} Gitlab CI, Docker, Flask SocketIO, Jinja, Pytest, Pylint, JSHint
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Activities}
+		\begin{cvsubsection}{Dependency Analysis}{Independent Study}{Sept 2019 - Present}	
+			\begin{itemize}
+				\item Research quantification of software quality attributes such as maintainability using Decoupling Level metric
+				\item Use of the open source tool Depends to model dependency structure of architectural components statically
+				\item Attend Automated Software Engineering 2019 conference in San Diego
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Peer Mentor}{}{Sept - Dec 2019}	
+			\begin{itemize}
+				\item Hosted coding competition to challenge students in a fun environment - \url{DrexelCCI.info/PMCodeGolf}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Technical Skills}
+		\begin{cvsubsection}{}{}{}	
+		    \begin{itemize}
+				\item \textbf{Proficient}: Java, Python, Unix, Git, SQL, JavaScript, Maven, Flask, Pytest, Pylint, HTML/CSS
+				\item \textbf{Familiar}: C++, C, Docker, LXC, SaltStack, Jenkins, Node.js
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+\end{document}
