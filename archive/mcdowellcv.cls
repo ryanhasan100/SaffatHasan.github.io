@@ -16,6 +16,7 @@
 % \usepackage{fontspec}
 % \setmainfont[SmallCapsFeatures={Renderer=Basic},Ligatures={TeX}]{\mainfontface}
 % Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface} %% NoCommon and NoDiscretionary not available
+\usepackage{mathptmx}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
