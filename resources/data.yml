@@ -10,7 +10,10 @@ education:
   name: Drexel University
   location: Philadelphia, PA
   graduation: Dec 2020
-  gpa: 3.55
+  summary_items:
+    - "B.S./M.S. in Computer Science | GPA: 3.55"
+    - "Graduate Coursework: 	Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
+    - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
 
 experience:
   - employer: Cigna, Philadelphia, PA
@@ -20,7 +23,7 @@ experience:
       - Explored cloud architectural patterns to support on-prem and cloud deployments
       - Created proof of concept leveraging Gloo for centralized network traffic configuration
       - Lead intern project using TDD and automated deployment patterns with GitOPS
-      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \& EKS, S2I, NodeJS, Angular, Express
+      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \\& EKS, S2I, NodeJS, Angular, Express
 
   - employer: Lockheed Martin, Moorestown, NJ
     title: Software Engineer
@@ -46,9 +49,25 @@ projects:
   - name: Film Rating Microservice POC
     duration: June - Aug 2020
     summary_items:
-      - did some cool stuff
-      - and other things
-      - of some nature
+      - Developed Command-line Interface to display moves for a piece given a board state
+      - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
+      - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
+      - Utilized Gitlab CI, Test-Driven Development, Python, Pylint, Pytest
+  - name: Chess Move Validation
+    duration: June - Aug 2019
+    summary_items:
+      - Developed Command-line Interface to display moves for a piece given a board state
+      - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
+      - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
+      - Utilized Gitlab CI, Test-Driven Development, Python, Pylint, Pytest
+  # - name: King Me
+  #   duration: Jan - June 2019
+  #   summary_items:
+  #     - Designed online checkers game using Flask SocketIO to allow players to create and join games
+  #     - Coordinated student team of four by creating mocked interfaces to enable concurrent development
+  #     - Emphasized portability by utilizing Docker to standardize runtime environment
+  #     - Enforced quality through use of Gitlab CI to automate static code analysis and testing
+  #     - Utilized Gitlab CI, Docker, Flask SocketIO, Jinja, Pytest, Pylint, JSHint
 
 skills:
   proficient: Java, Python, Unix, Git, SQL, JavaScript, Maven, Flask, Pytest, Pylint, HTML/CSS

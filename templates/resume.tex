@@ -25,9 +25,9 @@
 	\begin{cvsection}{Education}
 		\begin{cvsubsection}{\VAR{education.location}}{\VAR{education.name}}{Graduation: \VAR{education.graduation}}
 			\begin{itemize}
-				\item B.S./M.S. in Computer Science | GPA: 3.54
-				\item Graduate Coursework: 	Test Driven Dev \& eXtreme Prog; Web Services \& Mobile Arch; Data Analysis at Scale.
-				\item Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution.
+				%% for item in education.summary_items
+				\item \VAR{item}
+				%% endfor
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
@@ -44,10 +44,10 @@
 		%% endfor
 	
 	\begin{cvsection}{Software Projects - \url{www.gitlab.com/saffathasan}}
-		%% for job in experience
-		\begin{cvsubsection}{\VAR{job.employer}}{\VAR{job.title}}{\VAR{job.duration}}
+		%% for project in projects
+		\begin{cvsubsection}{\VAR{project.name}}{}{\VAR{project.duration}}
 			\begin{itemize}
-				%% for item in job.summary_items
+				%% for item in project.summary_items
 				\item \VAR{item}
 				%% endfor
 			\end{itemize}
@@ -55,20 +55,20 @@
 		%% endfor
 	\end{cvsection}
 
-	\begin{cvsection}{Activities}
-		\begin{cvsubsection}{Dependency Analysis}{Independent Study}{Sept 2019 - Present}	
-			\begin{itemize}
-				\item Research quantification of software quality attributes such as maintainability using Decoupling Level metric
-				\item Use of the open source tool Depends to model dependency structure of architectural components statically
-				\item Attend Automated Software Engineering 2019 conference in San Diego
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{Peer Mentor}{}{Sept - Dec 2019}	
-			\begin{itemize}
-				\item Hosted coding competition to challenge students in a fun environment - \url{DrexelCCI.info/PMCodeGolf}
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
+	% \begin{cvsection}{Activities}
+	% 	\begin{cvsubsection}{Dependency Analysis}{Independent Study}{Sept 2019 - Present}	
+	% 		\begin{itemize}
+	% 			\item Research quantification of software quality attributes such as maintainability using Decoupling Level metric
+	% 			\item Use of the open source tool Depends to model dependency structure of architectural components statically
+	% 			\item Attend Automated Software Engineering 2019 conference in San Diego
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% 	\begin{cvsubsection}{Peer Mentor}{}{Sept - Dec 2019}	
+	% 		\begin{itemize}
+	% 			\item Hosted coding competition to challenge students in a fun environment - \url{DrexelCCI.info/PMCodeGolf}
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% \end{cvsection}
 	
 	\begin{cvsection}{Technical Skills}
 		\begin{cvsubsection}{}{}{}	
