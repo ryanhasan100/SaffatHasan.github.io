@@ -111,22 +111,21 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape \VAR{contact.name}} \\ \vspace{1pt}
+    \small \VAR{contact.phone} $|$ \href{mailto:\VAR{contact.email}}{\underline{\VAR{contact.email}}} $|$ 
+    \href{\VAR{contact.linkedin}}{\underline{\VAR{contact.linkedin}}} $|$
+    \href{\VAR{contact.repo}}{\underline{\VAR{contact.repo}}}
 \end{center}
 
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
+    %% for school in education
     \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+      {\VAR{school.name}}{\VAR{school.location}}
+      {\VAR{school.description}}{Graduation: \VAR{school.graduation}}
+    %% endfor
   \resumeSubHeadingListEnd
 
 

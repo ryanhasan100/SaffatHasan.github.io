@@ -5,15 +5,23 @@ contact:
     city: Philadelphia
     state: PA
     zip: 19104
+  phone: (347) 604-5831
+  email: saffathasan@gmail.com
+  repo: gitlab.com/saffathasan
 
 education:
-  name: Drexel University
-  location: Philadelphia, PA
-  graduation: Dec 2020
-  summary_items:
-    - "B.S./M.S. in Computer Science | GPA: 3.55"
-    - "Graduate Coursework: 	Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
-    - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
+  - name: Drexel University
+    location: Philadelphia, PA
+    graduation: Dec 2020
+    summary_items:
+      - "B.S./M.S. in Computer Science | GPA: 3.55"
+      - "Graduate Coursework: 	Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
+      - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
+    description: "B.S./M.S. in Computer Science | GPA: 3.55"
+  - name: Queensborough Community College
+    location: Queens, NY
+    graduation: May 2017
+    description: "A.S. in Computer Science | GPA: 3.97"
 
 experience:
   - employer: Cigna, Philadelphia, PA
