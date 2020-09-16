@@ -17,7 +17,7 @@ experience:
       - Explored cloud architectural patterns to support on-prem and cloud deployments
       - Created proof of concept leveraging Gloo for centralized network traffic configuration
       - Lead intern project using TDD and automated deployment patterns with GitOPS
-      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda & EKS, S2I, NodeJS, Angular, Express
+      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \& EKS, S2I, NodeJS, Angular, Express
 
   - employer: Lockheed Martin, Moorestown, NJ
     title: Software Engineer
