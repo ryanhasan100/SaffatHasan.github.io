@@ -1,7 +1,7 @@
 import jinja2
 from jinja2 import Template
+import os
 import yaml
-
 
 def main():
     template_file = "templates/resume.tex"
@@ -37,11 +37,9 @@ def get_data(data_file):
     return data
 
 def render_template_to_file(template, data, output_file):
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, "w") as fh:
         fh.write(template.render(data))
-
-
-
 
 if __name__ == "__main__":
     main()
