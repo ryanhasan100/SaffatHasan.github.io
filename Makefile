@@ -4,5 +4,13 @@ IMAGE=zidizei/lualatex
 run:
 	python src/main.py
 
-compile:
-	docker run -i --rm -v "${PWD}/dist:/src" ${IMAGE} lualatex main.tex
+
+build:
+	docker build . -t latex
+
+compile: build
+	docker run -ti latex pdflatex resume.tex
+
+debug: build
+	docker run -ti -v "${PWD}:/data" -v "${PWD}:/miktex/work" latex sh
+	# docker run --rm -it --user="$(id -u):$(id -g)" --net=none -v "${PWD}:/data" brokenpylons/lualatex sh #lualatex
