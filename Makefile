@@ -7,3 +7,5 @@ run:
 	@rm dist/*.log dist/*.aux dist/*.out dist/*.tex
 	@echo Resume generated in dist/output.pdf
 
+compile-original:
+	docker run -ti -v "${PWD}/archive:${WORKDIR}" "${IMAGE}" lualatex main.tex
