@@ -24,7 +24,8 @@ education:
     description: "A.S. in Computer Science | GPA: 3.97"
 
 experience:
-  - employer: Cigna, Philadelphia, PA
+  - employer: Cigna
+    location: Philadelphia, PA
     title: Software Engineer
     duration: Apr 2020 - Present
     summary_items:
@@ -33,7 +34,8 @@ experience:
       - Lead intern project using TDD and automated deployment patterns with GitOPS
       - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \& EKS, S2I, NodeJS, Angular, Express
 
-  - employer: Lockheed Martin, Moorestown, NJ
+  - employer: Lockheed Martin
+    location: Moorsetown, NJ
     title: Software Engineer
     duration: Apr - Sept 2019
     summary_items:
@@ -43,7 +45,8 @@ experience:
       - Integrated build into Jenkins pipeline to automate deployment, SCA, and testing on every deliverable
       - \underline{Leveraged knowledge} in Maven, Git, Jenkins, JUnit, Google Test, Java, C++
 
-  - employer: MicroOffice, New York, NY
+  - employer: MicroOffice
+    location: New York, NY
     title: Software Developer
     duration: Feb 2017 - Jan 2019
     summary_items:
