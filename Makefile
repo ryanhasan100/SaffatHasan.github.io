@@ -1,16 +1,9 @@
-IMAGE=zidizei/lualatex
-# IMAGE=brokenpylons/lualatex
+IMAGE=blang/latex:ubuntu
+WORKDIR=/data
 
 run:
-	python src/main.py
+	@python src/main.py
+	@docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex output.tex &> /dev/null
+	@rm dist/*.log dist/*.aux dist/*.out dist/*.tex
+	@echo Resume generated in dist/output.pdf
 
-
-build:
-	docker build . -t latex
-
-compile: build
-	docker run -ti latex pdflatex resume.tex
-
-debug: build
-	docker run -ti -v "${PWD}:/data" -v "${PWD}:/miktex/work" latex sh
-	# docker run --rm -it --user="$(id -u):$(id -g)" --net=none -v "${PWD}:/data" brokenpylons/lualatex sh #lualatex
