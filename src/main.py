@@ -1,10 +1,10 @@
 import jinja2
-from jinja2 import Template
+from jinja2 import Template, FileSystemLoader
 import os
 import yaml
 
 def main():
-    template_file = "templates/resume.tex"
+    template_file = "templates/resume-simple.tex"
     data_file = "resources/data.yml"
     output_file = "dist/output.tex"
 
@@ -14,17 +14,17 @@ def main():
 
 def get_template(template_file):
     latex_jinja_env = jinja2.Environment(
-    	block_start_string = '\BLOCK{',
-    	block_end_string = '}',
-    	variable_start_string = '\VAR{',
-    	variable_end_string = '}',
-    	# comment_start_string = '\#{',
-    	# comment_end_string = '}',
-    	line_statement_prefix = '%%',
-    	# line_comment_prefix = '%#',
-    	# trim_blocks = True,
-    	# autoescape = False,
-    	# loader = jinja2.FileSystemLoader(os.path.abspath('/')),
+        loader=FileSystemLoader('templates'),
+        block_start_string = '\BLOCK{',
+        block_end_string = '}',
+        variable_start_string = '\VAR{',
+        variable_end_string = '}',
+        comment_start_string = '\#{',
+        comment_end_string = '}',
+        line_statement_prefix = '%%',
+        line_comment_prefix = '%#',
+        trim_blocks = True,
+        autoescape = False,
     )
     with open(template_file) as f:
         contents = f.read()
