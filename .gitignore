@@ -1,2 +1,5 @@
 dist/
 *.log
+*.aux
+*.out
+*.pdf
