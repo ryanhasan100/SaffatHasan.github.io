@@ -28,5 +28,6 @@ generate-resumes:
       - resume-simple.pdf
       - dist/resume.pdf
       - dist/resume-simple.pdf
+      - dist/
   dependencies:
     - generate-sources
