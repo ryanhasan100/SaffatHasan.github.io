@@ -1,0 +1,9 @@
+stages:
+  - build
+
+generate-pdf:
+  stage: build
+  image: blang/latex:ubuntu
+  script:
+    - cd archive
+    - lualatex main.tex
