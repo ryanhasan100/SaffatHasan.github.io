@@ -1,27 +1,27 @@
 IMAGE=blang/latex:ubuntu
 WORKDIR=/data
 
+# while true; do make --silent; sleep 1; done
+
 run: dist/resume-simple.pdf dist/resume.pdf
-	@rm dist/*.log dist/*.aux dist/*.out dist/*.tex dist/*.cls
+	@rm -f dist/*.log dist/*.aux dist/*.out
 	@echo Resume generated in dist/output.pdf
 
 dist/resume-simple.pdf: dist/resume-simple.tex dist
 	docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex > /dev/null
 
-dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls dist
+dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls
 	docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex > /dev/null
 
-dist/resume-simple.tex: src/main.py templates/resume-simple.tex dist
+dist/resume-simple.tex: src/main.py templates/resume-simple.tex
 	python src/main.py
 
-dist/resume.tex: src/main.py templates/resume.tex dist
+dist/resume.tex: src/main.py templates/resume.tex
 	python src/main.py
 
-dist/mcdowellcv.cls: archive/mcdowellcv.cls dist
+dist/mcdowellcv.cls: archive/mcdowellcv.cls
+	mkdir -p dist
 	cp archive/mcdowellcv.cls dist/mcdowellcv.cls
-
-dist:
-	mkdir dist
 
 debug:
 	docker run -ti -v "${PWD}/:${WORKDIR}" python sh
