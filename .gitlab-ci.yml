@@ -16,6 +16,7 @@ generate-source:
   stage: generate-source
   image: python:3.8
   script:
+    - pip install src/requirements.txt
     - python src/main.py
   artifacts:
     paths:
