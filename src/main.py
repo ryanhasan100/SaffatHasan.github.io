@@ -6,12 +6,19 @@ import yaml
 
 def main():
     template_file = "templates/resume.tex"
-    data_file = "resources/data.yml"
-    output_file = "dist/output.tex"
+    output_file = "dist/resume.tex"
 
+    generate_resume(template_file, output_file)
+
+    simple_template_file = "templates/resume-simple.tex"
+    simple_output_file = "dist/resume-simple.tex"
+
+    generate_resume(simple_template_file, simple_output_file)
+
+
+def generate_resume(template_file, output_file):
     template = get_template(template_file)
-    data = get_data(data_file)
-    render_template_to_file(template, data, output_file)
+    render_template_to_file(template, output_file)
 
 
 def get_template(template_file):
@@ -34,16 +41,18 @@ def get_template(template_file):
     return latex_jinja_env.from_string(contents)
 
 
-def get_data(data_file):
-    with open(data_file, 'r') as stream:
-        data = yaml.safe_load(stream)
-    return data
-
-
-def render_template_to_file(template, data, output_file):
+def render_template_to_file(template, output_file):
+    data = get_data()
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, "w") as fh:
         fh.write(template.render(data))
+
+
+def get_data():
+    data_file = "resources/data.yml"
+    with open(data_file, 'r') as stream:
+        data = yaml.safe_load(stream)
+    return data
 
 
 if __name__ == "__main__":
