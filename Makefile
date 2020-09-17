@@ -15,8 +15,7 @@ debug:
 compile-original:
 	docker run -ti -v "${PWD}/archive:${WORKDIR}" "${IMAGE}" lualatex main.tex
 
-.PHONY: venv
-venv:
+venv: src/requirements.txt
 	py -m venv venv
 	venv/Scripts/pip install -r src/requirements.txt
 
