@@ -7,3 +7,6 @@ generate-pdf:
   script:
     - cd archive
     - lualatex main.tex
+  artifacts:
+    paths:
+      - archive/main.pdf
