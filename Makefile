@@ -5,7 +5,6 @@ WORKDIR=/data
 
 run: dist/resume-simple.pdf dist/resume.pdf
 	@rm -f dist/*.log dist/*.aux dist/*.out
-	@echo Resume generated in dist/output.pdf
 
 dist/resume-simple.pdf: dist/resume-simple.tex dist
 	docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex > /dev/null
