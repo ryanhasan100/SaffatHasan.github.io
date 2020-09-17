@@ -41,7 +41,7 @@ experience:
       - Gitlab CI
       - AWS Lambda \& EKS
       # - S2I \& BuildPacks
-      - NodeJs
+      - Node.js
       - Angular
       - Express
 
