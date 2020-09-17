@@ -24,6 +24,5 @@ generate-resumes:
     paths:
       - dist/resume.pdf
       - dist/resume-simple.pdf
-      - dist/
   dependencies:
     - generate-sources
