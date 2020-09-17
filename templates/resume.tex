@@ -30,6 +30,7 @@
 				\item \VAR{item}
 				%% endfor
 			\end{itemize}
+			% \emph{\VAR{school.description}}
 		\end{cvsubsection}
 		%% endfor
 	\end{cvsection}
@@ -41,6 +42,7 @@
 				%% for item in job.summary_items
 				\item \VAR{item}
 				%% endfor
+				\item \underline{Leveraged knowledge} in \VAR{ job.skills|join(', ') }
 			\end{itemize}
 	    \end{cvsubsection}
 		%% endfor
@@ -53,6 +55,7 @@
 				%% for item in project.summary_items
 				\item \VAR{item}
 				%% endfor
+				\item \underline{Utilized} \VAR{ project.skills|join(', ') }
 			\end{itemize}
 	    \end{cvsubsection}
 		%% endfor

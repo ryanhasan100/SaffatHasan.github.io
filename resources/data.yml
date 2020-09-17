@@ -35,7 +35,15 @@ experience:
       - Explored cloud architectural patterns to support on-prem and cloud deployments
       - Created proof of concept leveraging Gloo for centralized network traffic configuration
       - Lead intern project using TDD and automated deployment patterns with GitOPS
-      - \underline{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \& EKS, S2I, NodeJS, Angular, Express
+    skills:
+      - Kubernetes
+      - OpenShift
+      - Gitlab CI
+      - AWS Lambda \& EKS
+      # - S2I \& BuildPacks
+      - NodeJs
+      - Angular
+      - Express
 
   - employer: Lockheed Martin
     location: Moorsetown, NJ
@@ -46,7 +54,14 @@ experience:
       - Incorporated automated testing using Google Test, JUnit, and Maven framework through feature toggles
       - Reduced build time by decomposing product through discussions about architecture with project leads
       - Integrated build into Jenkins pipeline to automate deployment, SCA, and testing on every deliverable
-      - \underline{Leveraged knowledge} in Maven, Git, Jenkins, JUnit, Google Test, Java, C++
+    skills:
+      - Maven
+      - Git
+      - Jenkins
+      - JUnit
+      - Google Test
+      - Java
+      - C++
 
   - employer: MicroOffice
     location: New York, NY
@@ -57,7 +72,13 @@ experience:
       - Integrated external desk management system with existing operations interface using web API calls
       - Updated payment portal to allow customers to make purchases independent of sales team
       - Automated operations visual reporting service to provide useful at-a-glance business metrics
-      - \underline{Leveraged knowledge} in Full Stack Web development, Python, JavaScript, Git, PostgreSQL, Flask
+    skills:
+      - Full Stack Web development
+      - Python
+      - JavaScript
+      - Git
+      - PostgreSQL
+      - Flask
 
 projects:
   - name: Film Rating Microservice POC
@@ -66,14 +87,24 @@ projects:
       - Developed Command-line Interface to display moves for a piece given a board state
       - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
       - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
-      - Utilized Gitlab CI, Test-Driven Development, Python, Pylint, Pytest
+    skills:
+      - Gitlab CI
+      - Test-Driven Development
+      - Python
+      - Pylint
+      - Pytest
   - name: Chess Move Validation
     duration: June - Aug 2019
     summary_items:
       - Developed Command-line Interface to display moves for a piece given a board state
       - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
       - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
-      - Utilized Gitlab CI, Test-Driven Development, Python, Pylint, Pytest
+    skills:
+      - Gitlab CI
+      - Test-Driven Development
+      - Python
+      - Pylint
+      - Pytest
   # - name: King Me
   #   duration: Jan - June 2019
   #   summary_items:
