@@ -19,9 +19,11 @@ education:
       - "Graduate Coursework: 	Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
       - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
     description: "B.S./M.S. in Computer Science | GPA: 3.55"
-  - name: Queensborough Community College
+  - name: Queensborough C.C.
     location: Queens, NY
     graduation: May 2017
+    summary_items:
+      - "A.S. in Computer Science | GPA: 3.97"
     description: "A.S. in Computer Science | GPA: 3.97"
 
 experience:
