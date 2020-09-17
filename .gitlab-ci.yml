@@ -1,4 +1,5 @@
 stages:
+  - generate-source
   - build
 
 generate-pdf:
@@ -10,3 +11,24 @@ generate-pdf:
   artifacts:
     paths:
       - archive/main.pdf
+
+generate-source:
+  stage: generate-source
+  image: python:3.8
+  script:
+    - python src/main.py
+  artifacts:
+    paths:
+      - dist/
+
+generate-pdf-2:
+  stage: build
+  image: blang/latex:ubuntu
+  script:
+    - cd dist
+    - lualatex output.tex
+  artifacts:
+    paths:
+      - archive/output.pdf
+  dependencies:
+    - generate-source
