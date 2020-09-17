@@ -84,15 +84,16 @@ projects:
   - name: Film Rating Microservice POC
     duration: June - Aug 2020
     summary_items:
-      - Developed Command-line Interface to display moves for a piece given a board state
-      - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
-      - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
+      - Architected simple yet highly decoupled IMDB clone
+      - Designed each service to be independently deployable
+      - Created web and client service consumers
     skills:
-      - Gitlab CI
-      - Test-Driven Development
-      - Python
-      - Pylint
-      - Pytest
+      - Flutter
+      - GraphQL
+      - Node.js
+      - MongoDB
+      - Docker Compose
+      - JWT Authentication
   - name: Chess Move Validation
     duration: June - Aug 2019
     summary_items:
