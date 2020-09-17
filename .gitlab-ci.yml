@@ -2,17 +2,7 @@ stages:
   - generate-source
   - build
 
-generate-pdf:
-  stage: build
-  image: blang/latex:ubuntu
-  script:
-    - cd archive
-    - lualatex main.tex
-  artifacts:
-    paths:
-      - archive/main.pdf
-
-generate-source:
+generate-sources:
   stage: generate-source
   image: python:3.8
   script:
@@ -22,15 +12,16 @@ generate-source:
     paths:
       - dist/
 
-generate-pdf-2:
+generate-resumes:
   stage: build
   image: blang/latex:ubuntu
   script:
     - cp archive/mcdowellcv.cls dist
     - cd dist
-    - lualatex output.tex
+    - lualatex resume.tex
+    - lualatex resume-simple.tex
   artifacts:
     paths:
-      - archive/output.pdf
+      - archive/*.pdf
   dependencies:
-    - generate-source
+    - generate-sources
