@@ -105,15 +105,40 @@ projects:
       - Python
       - Pylint
       - Pytest
-  # - name: King Me
-  #   duration: Jan - June 2019
-  #   summary_items:
-  #     - Designed online checkers game using Flask SocketIO to allow players to create and join games
-  #     - Coordinated student team of four by creating mocked interfaces to enable concurrent development
-  #     - Emphasized portability by utilizing Docker to standardize runtime environment
-  #     - Enforced quality through use of Gitlab CI to automate static code analysis and testing
-  #     - Utilized Gitlab CI, Docker, Flask SocketIO, Jinja, Pytest, Pylint, JSHint
+  - name: King Me
+    duration: Jan - June 2019
+    summary_items:
+      - Designed online checkers game using Flask SocketIO to allow players to create and join games
+      - Coordinated student team of four by creating mocked interfaces to enable concurrent development
+      - Emphasized portability by utilizing Docker to standardize runtime environment
+      - Enforced quality through use of Gitlab CI to automate static code analysis and testing
+    skills:
+      - Gitlab CI
+      - Docker
+      - Flask SocketIO
+      - Jinja
+      - Pytest
+      - Pylint
+      - JSHint
 
 skills:
-  proficient: Java, Python, Unix, Git, SQL, JavaScript, Maven, Flask, Pytest, Pylint, HTML/CSS
-  familiar: C++, C, Docker, LXC, SaltStack, Jenkins, Node.js
+  proficient:
+    - Java
+    - Python
+    - Unix
+    - Git
+    - SQL
+    - JavaScript
+    - Maven
+    - Flask
+    - Pytest
+    - Pylint
+    - HTML/CSS
+  familiar:
+    - C++
+    - C
+    - Docker
+    - LXC
+    - SaltStack
+    - Jenkins
+    - Node.js
