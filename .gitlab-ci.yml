@@ -20,6 +20,8 @@ generate-resumes:
     - cd dist
     - lualatex resume.tex
     - lualatex resume-simple.tex
+    - ls
+    - find .
   artifacts:
     paths:
       - resume.pdf
