@@ -26,6 +26,7 @@ generate-pdf-2:
   stage: build
   image: blang/latex:ubuntu
   script:
+    - cp archive/mcdowellcv.cls dist
     - cd dist
     - lualatex output.tex
   artifacts:
