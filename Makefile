@@ -1,8 +1,8 @@
 IMAGE=blang/latex:ubuntu
 WORKDIR=/data
 
-run:
-	@python src/main.py
+run: venv
+	@venv/Scripts/python src/main.py
 	@cp archive/mcdowellcv.cls dist/
 	@docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex &> /dev/null
 	@docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex &> /dev/null
@@ -15,5 +15,13 @@ debug:
 compile-original:
 	docker run -ti -v "${PWD}/archive:${WORKDIR}" "${IMAGE}" lualatex main.tex
 
+.PHONY: venv
+venv:
+	py -m venv venv
+	venv/Scripts/pip install -r src/requirements.txt
+
+
 clean:
 	@rm -rf dist/
+
+
