@@ -23,13 +23,15 @@
 	\makeheader
 	
 	\begin{cvsection}{Education}
-		\begin{cvsubsection}{\VAR{education.location}}{\VAR{education.name}}{Graduation: \VAR{education.graduation}}
+		%% for school in education
+		\begin{cvsubsection}{\VAR{school.name}}{\VAR{school.location}}{Graduation: \VAR{school.graduation}}
 			\begin{itemize}
-				%% for item in education.summary_items
+				%% for item in school.summary_items
 				\item \VAR{item}
 				%% endfor
 			\end{itemize}
 		\end{cvsubsection}
+		%% endfor
 	\end{cvsection}
 
 	\begin{cvsection}{Professional Experience}
