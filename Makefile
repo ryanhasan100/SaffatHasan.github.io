@@ -4,7 +4,6 @@ WORKDIR=/data
 # while true; do make --silent; sleep 1; done
 
 run: dist/resume-simple.pdf dist/resume.pdf
-	@rm -f dist/*.log dist/*.aux dist/*.out
 
 dist/resume-simple.pdf: dist/resume-simple.tex dist
 	docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex > /dev/null
