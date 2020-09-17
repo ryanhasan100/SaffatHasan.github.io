@@ -22,6 +22,6 @@ generate-resumes:
     - lualatex resume-simple.tex
   artifacts:
     paths:
-      - archive/*.pdf
+      - "*.pdf"
   dependencies:
     - generate-sources
