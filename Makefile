@@ -11,10 +11,10 @@ resume: dist/resume.pdf
 resume-simple: dist/resume-simple.pdf
 
 dist/resume-simple.pdf: dist/resume-simple.tex dist
-	docker run --rm -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex > /dev/null
+	docker run --rm -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex | tail -n2
 
 dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls
-	docker run --rm -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex > /dev/null
+	docker run --rm -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex | tail -n2
 
 dist/resume-simple.tex: src/main.py templates/resume-simple.tex resources/data.yml
 	python src/main.py
