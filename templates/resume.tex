@@ -12,6 +12,10 @@
 }
 \urlstyle{same}
 
+% Underline package
+\usepackage{soul}
+\setuldepth{a}
+
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
@@ -45,7 +49,7 @@
 				%% for item in job.summary_items
 				\item \VAR{item}
 				%% endfor
-				\item \underline{Leveraged knowledge} in \VAR{ job.skills|join(', ') }
+				\item \ul{Leveraged knowledge} in \VAR{ job.skills|join(', ') }
 			\end{itemize}
 	    \end{cvsubsection}
 		%% endfor
@@ -58,7 +62,7 @@
 				%% for item in project.summary_items
 				\item \VAR{item}
 				%% endfor
-				\item \underline{Utilized} \VAR{ project.skills|join(', ') }
+				\item \ul{Utilized} \VAR{ project.skills|join(', ') }
 			\end{itemize}
 	    \end{cvsubsection}
 		%% endfor

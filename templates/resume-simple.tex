@@ -20,6 +20,10 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+%-----------UNDERLINE-----------
+\usepackage{soul}
+\setuldepth{a}
+
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -113,9 +117,9 @@
 
 \begin{center}
     \textbf{\Huge \scshape \VAR{contact.name}} \\ \vspace{1pt}
-    \small \VAR{contact.phone} $|$ \href{mailto:\VAR{contact.email}}{\underline{\VAR{contact.email}}} $|$ 
-    \href{\VAR{contact.linkedin}}{\underline{\VAR{contact.linkedin}}} $|$
-    \href{\VAR{contact.repo}}{\underline{\VAR{contact.repo}}}
+    \small \VAR{contact.phone} $|$ \href{mailto:\VAR{contact.email}}{\ul{\VAR{contact.email}}} $|$
+    \href{\VAR{contact.linkedin}}{\ul{\VAR{contact.linkedin}}} $|$
+    \href{\VAR{contact.repo}}{\ul{\VAR{contact.repo}}}
 \end{center}
 
 
@@ -142,7 +146,7 @@
         %% for item in job.summary_items
         \resumeItem{\VAR{item}}
         %% endfor
-        \resumeItem{\underline{Leveraged} \VAR{job.skills|join(', ')}}
+        \resumeItem{\ul{Leveraged} \VAR{job.skills|join(', ')}}
       \resumeItemListEnd
     %% endfor
       
@@ -159,7 +163,7 @@
             %% for item in project.summary_items
             \resumeItem{\VAR{item}}
             %% endfor
-            \resumeItem{\underline{Utilized} \VAR{project.skills|join(', ')}}
+            \resumeItem{\ul{Utilized} \VAR{project.skills|join(', ')}}
           \resumeItemListEnd
       %% endfor
     \resumeSubHeadingListEnd
