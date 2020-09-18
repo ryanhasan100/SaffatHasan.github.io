@@ -17,10 +17,10 @@ dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls
 	docker run --rm -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex | tail -n2
 
 dist/resume-simple.tex: src/main.py templates/resume-simple.tex resources/data.yml
-	python src/main.py
+	python src/main.py resume-simple
 
 dist/resume.tex: src/main.py templates/resume.tex resources/data.yml
-	python src/main.py
+	python src/main.py resume
 
 dist/mcdowellcv.cls: archive/mcdowellcv.cls
 	mkdir -p dist

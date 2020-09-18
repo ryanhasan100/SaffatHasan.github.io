@@ -1,19 +1,16 @@
 import jinja2
 from jinja2 import Template, FileSystemLoader
 import os
+import sys
 import yaml
 
 
 def main():
-    template_file = "templates/resume.tex"
-    output_file = "dist/resume.tex"
+    resume_name = sys.argv[1]
+    template_file = f"templates/{resume_name}.tex"
+    output_file = f"dist/{resume_name}.tex"
 
     generate_resume(template_file, output_file)
-
-    simple_template_file = "templates/resume-simple.tex"
-    simple_output_file = "dist/resume-simple.tex"
-
-    generate_resume(simple_template_file, simple_output_file)
 
 
 def generate_resume(template_file, output_file):
