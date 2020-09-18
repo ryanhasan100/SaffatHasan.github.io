@@ -7,6 +7,9 @@ run: dist/resume-simple.pdf dist/resume.pdf
 watch:
 	while true; do make --silent; sleep 1; done
 
+resume: dist/resume.pdf
+resume-simple: dist/resume-simple.pdf
+
 dist/resume-simple.pdf: dist/resume-simple.tex dist
 	docker run -ti -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume-simple.tex > /dev/null
 
