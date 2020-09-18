@@ -93,49 +93,26 @@
 %                            Header Setup and Printing                          -
 %--------------------------------------------------------------------------------
 
-% Address
-\makeatletter
-
-\newcommand\address[1]{\def\@address{#1}}
-\address{}
-
-\newcommand\printaddress{
-	\small{\@address}
-}
-
-\makeatother
-
 % Name
 \makeatletter
 
-\newcommand\name[1]{\def\@name{#1}}
-\name{}
-
-\newcommand\printname{
+\newcommand{\printname}[1]{
 	\typeout {kokoko}
 	\typeout \spaceskip
     \spaceskip \namespaceskip \relax
-	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
+	\textbf{\LARGE\textls[110]{\textsc{#1}}}
 }
 
 \makeatother
 
-% Contacts
-\makeatletter
-\newcommand\contacts[1]{\def\@contacts{#1}}
-\contacts{}
-
-\newcommand\printcontacts{
-	\small{\@contacts}
-}
-
+% Header
 \makeatother
 
 \makeatletter
 \newcommand{\makeheader}[3]{
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-			#1 & #2 & #3 \\
+			\small{#1} & \printname{#2} & \small{#3} \\
 		\end{tabu}	
 	\end{center}
 	\vspace*{\afterheaderspace}

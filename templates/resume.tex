@@ -19,18 +19,13 @@
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-% Set personal data for header
-\name{\VAR{contact.name}}
-\address{\VAR{contact.address.line1} \linebreak \VAR{contact.address.city} \VAR{contact.address.state} \VAR{contact.address.zip}}
-\contacts{(347) 604-5831 \linebreak saffathasan@gmail.com}
-
 \begin{document}
 
 	% Print the header
 	\makeheader
-		{\printaddress}
-		{\printname}
-		{\printcontacts}
+		{\VAR{contact.address.line1} \linebreak \VAR{contact.address.city} \VAR{contact.address.state} \VAR{contact.address.zip}}
+		{\VAR{contact.name}}
+		{\VAR{contact.phone} \linebreak \VAR{contact.email}}
 	
 	\begin{cvsection}{Education}
 		%% for school in education[:1]
