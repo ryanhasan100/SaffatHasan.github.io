@@ -7,7 +7,7 @@ contact:
     zip: 19104
   phone: (347) 604-5831
   email: saffathasan@gmail.com
-  repo: gitlab.com/saffathasan
+  repo: www.gitlab.com/saffathasan
   linkedin: linkedin.com/in/saffat-hasan
 
 education:
@@ -82,6 +82,7 @@ experience:
 
 projects:
   - name: Film Rating Microservice POC
+    url: https://gitlab.com/saffathasan/se572
     duration: June - Aug 2020
     summary_items:
       - Architected simple yet highly decoupled IMDB clone
@@ -95,6 +96,7 @@ projects:
       - Docker Compose
       - JWT Authentication
   - name: Chess Move Validation
+    url: https://gitlab.com/saffathasan/chess-validator
     duration: June - Aug 2019
     summary_items:
       - Developed Command-line Interface to display moves for a piece given a board state
@@ -107,6 +109,7 @@ projects:
       - Pylint
       - Pytest
   - name: King Me
+    url: https://gitlab.com/saffathasan/king-me
     duration: Jan - June 2019
     summary_items:
       - Designed online checkers game using Flask SocketIO to allow players to create and join games

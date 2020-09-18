@@ -23,9 +23,9 @@
 
 	% Print the header
 	\makeheader
-		{\ul{\VAR{contact.repo}} \linebreak \ul{\VAR{contact.linkedin}}}
+		{\href{https://\VAR{contact.repo}}{\VAR{contact.repo}} \linebreak \href{https://\VAR{contact.linkedin}}{\VAR{contact.linkedin}}}
 		{\VAR{contact.name}}
-		{\VAR{contact.phone} \linebreak \ul{\VAR{contact.email}}}
+		{\VAR{contact.phone} \linebreak \href{mailto:\VAR{contact.email}}{\VAR{contact.email}}}
 	
 	\begin{cvsection}{Education}
 		%% for school in education[:1]
@@ -55,7 +55,10 @@
 	
 	\begin{cvsection}{Software Projects - \url{www.gitlab.com/saffathasan}}
 		%% for project in projects
-		\begin{cvsubsection}{\VAR{project.name}}{}{\VAR{project.duration}}
+		\begin{cvsubsection}
+			{\href{\VAR{project.url}}{\VAR{project.name}}}
+			{}
+			{\VAR{project.duration}}
 			\begin{itemize}
 				%% for item in project.summary_items
 				\item \VAR{item}
