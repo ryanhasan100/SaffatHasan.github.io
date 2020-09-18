@@ -37,6 +37,15 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
+%-------------LINKS---------------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -50,8 +59,6 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
 
 \raggedbottom
 \raggedright
@@ -118,8 +125,8 @@
 \begin{center}
     \textbf{\Huge \scshape \VAR{contact.name}} \\ \vspace{1pt}
     \small \VAR{contact.phone} $|$ \href{mailto:\VAR{contact.email}}{\ul{\VAR{contact.email}}} $|$
-    \href{\VAR{contact.linkedin}}{\ul{\VAR{contact.linkedin}}} $|$
-    \href{\VAR{contact.repo}}{\ul{\VAR{contact.repo}}}
+    \href{https://\VAR{contact.linkedin}}{\VAR{contact.linkedin}} $|$
+    \href{https://\VAR{contact.repo}}{\VAR{contact.repo}}
 \end{center}
 
 
@@ -154,11 +161,13 @@
 
 
 %-----------PROJECTS-----------
-\section{Projects - \VAR{contact.repo}}
+\section{Projects \url{\VAR{contact.repo}}}
     \resumeSubHeadingListStart
       %% for project in projects
       \resumeProjectHeading
-          {\textbf{\VAR{project.name}}}{\VAR{project.duration}}
+          % {\textbf{\VAR{project.name}}}{\VAR{project.duration}}
+          {\href{\VAR{project.url}}{\textbf{\VAR{project.name}}}}
+          {\VAR{project.duration}}
           \resumeItemListStart
             %% for item in project.summary_items
             \resumeItem{\VAR{item}}
