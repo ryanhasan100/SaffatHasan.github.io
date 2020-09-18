@@ -132,10 +132,10 @@
 \makeatother
 
 \makeatletter
-\newcommand\makeheader{
+\newcommand{\makeheader}[3]{
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-			\printaddress & \printname & \printcontacts \\
+			#1 & #2 & #3 \\
 		\end{tabu}	
 	\end{center}
 	\vspace*{\afterheaderspace}
