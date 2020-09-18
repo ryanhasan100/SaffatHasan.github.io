@@ -142,6 +142,7 @@
         %% for item in job.summary_items
         \resumeItem{\VAR{item}}
         %% endfor
+        \resumeItem{\underline{Leveraged} \VAR{job.skills|join(', ')}}
       \resumeItemListEnd
     %% endfor
       
@@ -158,6 +159,7 @@
             %% for item in project.summary_items
             \resumeItem{\VAR{item}}
             %% endfor
+            \resumeItem{\underline{Utilized} \VAR{project.skills|join(', ')}}
           \resumeItemListEnd
       %% endfor
     \resumeSubHeadingListEnd
