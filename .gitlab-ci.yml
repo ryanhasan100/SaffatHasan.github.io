@@ -1,6 +1,7 @@
 stages:
   - generate-source
   - build
+  - deploy
 
 generate-sources:
   stage: generate-source
@@ -27,3 +28,9 @@ generate-resumes:
       - dist/resume-simple.pdf
   dependencies:
     - generate-sources
+
+deploy:
+  stage: deploy
+  script:
+    - echo $SSHPASS
+    - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf sh3292@tux.cs.drexel.edu:~/public_html/
