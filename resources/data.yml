@@ -81,6 +81,20 @@ experience:
       - Flask
 
 projects:
+  - name: This Resume
+    url: https://gitlab.com/saffathasan/resume
+    duration: Sept 2020 - Present
+    summary_items:
+      - Completely automated creation of my resume
+      - Decouple data from style enabling multi-format generation using single YAML source
+      - Design resume template using LaTeX (inspiration credited)
+      - Generate PDF using LaTeX wrapped in Docker and Python templating engine
+      - Deploy automatically on merges to master using ssh and rsync
+    skills:
+      - Python
+      - LaTeX
+      - Docker
+      - Gitlab CI
   - name: Film Rating Microservice POC
     url: https://gitlab.com/saffathasan/se572
     duration: June - Aug 2020
@@ -95,19 +109,19 @@ projects:
       - MongoDB
       - Docker Compose
       - JWT Authentication
-  - name: Chess Move Validation
-    url: https://gitlab.com/saffathasan/chess-validator
-    duration: June - Aug 2019
-    summary_items:
-      - Developed Command-line Interface to display moves for a piece given a board state
-      - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
-      - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
-    skills:
-      - Gitlab CI
-      - Test-Driven Development
-      - Python
-      - Pylint
-      - Pytest
+  # - name: Chess Move Validation
+  #   url: https://gitlab.com/saffathasan/chess-validator
+  #   duration: June - Aug 2019
+  #   summary_items:
+  #     - Developed Command-line Interface to display moves for a piece given a board state
+  #     - Standardized code quality by using Pylint and pytest for static code analysis and automated testing
+  #     - Incorporated Gitlab CI for SCA, testing, and coverage in containerized environment
+  #   skills:
+  #     - Gitlab CI
+  #     - Test-Driven Development
+  #     - Python
+  #     - Pylint
+  #     - Pytest
   - name: King Me
     url: https://gitlab.com/saffathasan/king-me
     duration: Jan - June 2019
