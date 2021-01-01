@@ -86,11 +86,10 @@ projects:
     url: https://gitlab.com/saffathasan/resume
     duration: Sept 2020 - Present
     summary_items:
-      - Completely automated creation of my resume
+      - Automatically deploy master using ssh and rsync
       - Decouple data from style enabling multi-format generation using single YAML source
       - Design resume template using LaTeX (inspiration credited)
       - Generate PDF using LaTeX wrapped in Docker and Python templating engine
-      - Deploy automatically on merges to master using ssh and rsync
     skills:
       - Python
       - LaTeX
