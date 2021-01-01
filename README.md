@@ -1,4 +1,4 @@
-# Resume
+# Resume [![pipeline status](https://gitlab.com/saffathasan/resume/badges/master/pipeline.svg)](https://gitlab.com/saffathasan/resume/-/commits/master)
 
 This project contains the code to generate `Saffat Hasan`'s resume.
 
