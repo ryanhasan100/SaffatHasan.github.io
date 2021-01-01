@@ -32,10 +32,12 @@ experience:
     title: Software Engineer
     duration: Apr 2020 - Present
     summary_items:
+      - Wrote presigned URL generator Lambda emphasizing JSON Schema for contract validation
       - Explored cloud architectural patterns to support on-prem and cloud deployments
       - Created proof of concept leveraging Gloo for centralized network traffic configuration
       - Lead intern project using TDD and automated deployment patterns with GitOPS
     skills:
+      - AWS Lambda
       - Kubernetes
       - OpenShift
       - Gitlab CI
