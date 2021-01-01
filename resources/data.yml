@@ -88,7 +88,6 @@ projects:
     summary_items:
       - Automatically deploy master using ssh and rsync
       - Decouple data from style enabling multi-format generation using single YAML source
-      - Design resume template using LaTeX (inspiration credited)
       - Generate PDF using LaTeX wrapped in Docker and Python templating engine
     skills:
       - Python
