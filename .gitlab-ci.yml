@@ -31,6 +31,9 @@ generate-resumes:
 
 deploy:
   stage: deploy
+  only:
+    refs:
+      - master
   script:
-    - echo $SSHPASS
+    - apt-get update -qq && apt-get install -y -qq sshpass
     - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf sh3292@tux.cs.drexel.edu:~/public_html/
