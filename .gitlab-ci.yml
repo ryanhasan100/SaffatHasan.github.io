@@ -1,3 +1,8 @@
+variables:
+  DEPLOY_USER: sh3292
+  DEPLOY_URL: tux.cs.drexel.edu
+  DEPLOY_PATH: ~/public_html/
+
 stages:
   - generate-source
   - build
@@ -36,4 +41,4 @@ deploy:
       - master
   script:
     - apt-get update -qq && apt-get install -y -qq sshpass
-    - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf sh3292@tux.cs.drexel.edu:~/public_html/
+    - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf $DEPLOY_USER@$DEPLOY_URL:$DEPLOY_PATH
