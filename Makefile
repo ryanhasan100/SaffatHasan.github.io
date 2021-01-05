@@ -29,9 +29,6 @@ dist/mcdowellcv.cls: resources/mcdowellcv.cls
 debug:
 	docker run -ti -v "${PWD}/:${WORKDIR}" python sh
 
-compile-original:
-	docker run -ti -v "${PWD}/archive:${WORKDIR}" "${IMAGE}" lualatex main.tex
-
 venv: src/requirements.txt
 	py -m venv venv
 	venv/Scripts/pip install -r src/requirements.txt
