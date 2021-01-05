@@ -23,7 +23,7 @@ generate-resumes:
   stage: build
   image: blang/latex:ubuntu
   script:
-    - cp archive/mcdowellcv.cls dist
+    - cp resources/mcdowellcv.cls dist
     - cd dist
     - lualatex resume.tex
     - lualatex resume-simple.tex

@@ -22,9 +22,9 @@ dist/resume-simple.tex: src/main.py templates/resume-simple.tex resources/data.y
 dist/resume.tex: src/main.py templates/resume.tex resources/data.yml
 	python src/main.py resume
 
-dist/mcdowellcv.cls: archive/mcdowellcv.cls
+dist/mcdowellcv.cls: resources/mcdowellcv.cls
 	mkdir -p dist
-	cp archive/mcdowellcv.cls dist/mcdowellcv.cls
+	cp resources/mcdowellcv.cls dist/mcdowellcv.cls
 
 debug:
 	docker run -ti -v "${PWD}/:${WORKDIR}" python sh
