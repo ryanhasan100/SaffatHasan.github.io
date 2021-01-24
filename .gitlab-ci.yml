@@ -2,6 +2,7 @@ variables:
   DEPLOY_USER: sh3292
   DEPLOY_URL: tux.cs.drexel.edu
   DEPLOY_PATH: ~/public_html/
+  S3_BUCKET_NAME: saffat-bucket
 
 stages:
   - generate-source
@@ -34,7 +35,7 @@ generate-resumes:
   dependencies:
     - generate-sources
 
-deploy:
+deploy-to-tux:
   stage: deploy
   only:
     refs:
@@ -42,3 +43,13 @@ deploy:
   script:
     - apt-get update -qq && apt-get install -y -qq sshpass
     - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf $DEPLOY_USER@$DEPLOY_URL:$DEPLOY_PATH
+
+deploy-to-s3:
+  stage: deploy
+  only:
+    refs:
+      - master
+  image: python:latest
+  script:
+    - pip install awscli
+    - aws s3 cp ./dist s3://$S3_BUCKET_NAME/ --recursive --exclude "*" --include "*.pdf"
