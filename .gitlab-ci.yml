@@ -5,6 +5,7 @@ variables:
   S3_BUCKET_NAME: saffat-bucket
 
 stages:
+  - temp
   - generate-source
   - build
   - deploy
@@ -34,6 +35,26 @@ generate-resumes:
       - dist/resume-simple.pdf
   dependencies:
     - generate-sources
+
+terraform:
+  # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
+  stage: temp
+  image:
+    name: hashicorp/terraform
+    entrypoint:
+      - /usr/bin/env
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  before_script:
+    - cd terraform/
+  script:
+    - terraform init
+    - terraform validate
+    - terraform plan --out plan
+    # - terraform apply --auto-approve plan
+  cache:
+    key: terraform
+    paths:
+      - terraform/.terraform
 
 deploy-to-tux:
   stage: deploy
