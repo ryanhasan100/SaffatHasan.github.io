@@ -8,6 +8,7 @@ stages:
   - check
   - generate-source
   - build
+  - deploy-prereq
   - deploy
 
 check-python:
@@ -72,7 +73,7 @@ deploy-to-tux:
 
 create-bucket:
   # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
-  stage: deploy
+  stage: deploy-prereq
   only:
     refs:
       - master
