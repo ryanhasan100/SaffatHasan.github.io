@@ -15,7 +15,7 @@ check-python:
   image: python:3.8
   stage: check
   script:
-    - pip install -r src/requirements.txt
+    - pip install -r test/requirements.txt
     - pylint src/
 
 check-terraform:
