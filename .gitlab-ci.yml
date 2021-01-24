@@ -2,7 +2,7 @@ variables:
   DEPLOY_USER: sh3292
   DEPLOY_URL: tux.cs.drexel.edu
   DEPLOY_PATH: ~/public_html/
-  S3_BUCKET_NAME: saffat-bucket
+  S3_BUCKET_NAME: saffat-resume-bucket
 
 stages:
   - check
