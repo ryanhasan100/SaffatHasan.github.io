@@ -70,6 +70,8 @@ deploy-to-tux:
   script:
     - apt-get update -qq && apt-get install -y -qq sshpass
     - sshpass -e scp -o stricthostkeychecking=no dist/*.pdf $DEPLOY_USER@$DEPLOY_URL:$DEPLOY_PATH
+  dependencies:
+    - generate-resumes
 
 create-bucket:
   # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
@@ -107,3 +109,4 @@ deploy-to-s3:
     - aws s3 cp ./dist/*.pdf s3://$S3_BUCKET_NAME/
   dependencies:
     - create-bucket
+    - generate-resumes
