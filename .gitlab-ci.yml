@@ -8,7 +8,7 @@ stages:
   - check
   - generate-source
   - build
-  - deploy-prereq
+  # - deploy-prereq
   - deploy
 
 check-python:
@@ -18,23 +18,23 @@ check-python:
     - pip install -r test/requirements.txt
     - pylint src/
 
-check-terraform:
-  # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
-  stage: check
-  image:
-    name: hashicorp/terraform
-    entrypoint:
-      - /usr/bin/env
-      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  before_script:
-    - cd terraform/
-    - terraform init
-  script:
-    - terraform validate
-  cache:
-    key: terraform
-    paths:
-      - terraform/.terraform
+# check-terraform:
+#   # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
+#   stage: check
+#   image:
+#     name: hashicorp/terraform
+#     entrypoint:
+#       - /usr/bin/env
+#       - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#   before_script:
+#     - cd terraform/
+#     - terraform init
+#   script:
+#     - terraform validate
+#   cache:
+#     key: terraform
+#     paths:
+#       - terraform/.terraform
 
 generate-sources:
   stage: generate-source
@@ -73,40 +73,40 @@ deploy-to-tux:
   dependencies:
     - generate-resumes
 
-create-bucket:
-  # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
-  stage: deploy-prereq
-  only:
-    refs:
-      - master
-  image:
-    name: hashicorp/terraform
-    entrypoint:
-      - /usr/bin/env
-      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  before_script:
-    - cd terraform/
-    - terraform init
-  script:
-    - terraform validate
-    - terraform plan --out plan
-    - terraform apply --auto-approve plan
-  cache:
-    key: terraform
-    paths:
-      - terraform/.terraform
+# create-bucket:
+#   # https://matavelli.io/posts/2020/01/setup-gitlab-ci-with-terraform/
+#   stage: deploy-prereq
+#   only:
+#     refs:
+#       - master
+#   image:
+#     name: hashicorp/terraform
+#     entrypoint:
+#       - /usr/bin/env
+#       - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#   before_script:
+#     - cd terraform/
+#     - terraform init
+#   script:
+#     - terraform validate
+#     - terraform plan --out plan
+#     - terraform apply --auto-approve plan
+#   cache:
+#     key: terraform
+#     paths:
+#       - terraform/.terraform
 
-deploy-to-s3:
-  stage: deploy
-  only:
-    refs:
-      - master
-  image: python:latest
-  script:
-    - pip install awscli
-    - ls
-    - pwd
-    - aws s3 cp ./dist/*.pdf s3://$S3_BUCKET_NAME/
-  dependencies:
-    - create-bucket
-    - generate-resumes
+# deploy-to-s3:
+#   stage: deploy
+#   only:
+#     refs:
+#       - master
+#   image: python:latest
+#   script:
+#     - pip install awscli
+#     - ls
+#     - pwd
+#     - aws s3 cp ./dist/*.pdf s3://$S3_BUCKET_NAME/
+#   dependencies:
+#     - create-bucket
+#     - generate-resumes
