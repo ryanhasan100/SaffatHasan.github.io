@@ -1,0 +1,131 @@
+
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+% Underline package
+\usepackage{soul}
+\setuldepth{a}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+		{\href{https://gitlab.com/saffathasan | github.com/saffathasan}{gitlab.com/saffathasan | github.com/saffathasan} \linebreak \href{https://linkedin.com/in/saffat-hasan}{linkedin.com/in/saffat-hasan}}
+		{Saffat Hasan}
+		{(xxx) xxx-xxxx \linebreak \href{mailto:saffathasan@gmail.com}{saffathasan@gmail.com}}
+	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Drexel University}{Philadelphia, PA}{Graduation: March 2021}
+			\begin{itemize}
+				\item B.S./M.S. in Computer Science | GPA: 3.66
+				\item Graduate Coursework: Test Driven Dev \& eXtreme Prog; Web Services \& Mobile Arch; Data Analysis at Scale.
+				\item Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution.
+			\end{itemize}
+			% \emph{B.S./M.S. in Computer Science | GPA: 3.66}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Professional Experience}
+		\begin{cvsubsection}{Cigna}{Software Engineer}{Apr 2020 - Present}
+			\begin{itemize}
+				\item Wrote presigned URL generator Lambda emphasizing JSON Schema for contract validation
+				\item Explored cloud architectural patterns to support on-prem and cloud deployments
+				\item Created proof of concept leveraging Gloo for centralized network traffic configuration
+				\item Lead intern project using TDD and automated deployment patterns with GitOPS
+				\item \ul{Leveraged knowledge} in Kubernetes, OpenShift, Gitlab CI, AWS Lambda \& EKS, Node.js, Angular, Express
+			\end{itemize}
+	    \end{cvsubsection}
+		\begin{cvsubsection}{Lockheed Martin}{Software Engineer}{Apr - Sept 2019}
+			\begin{itemize}
+				\item Transitioned computer program into Git from Clearcase including training and best practices
+				\item Incorporated automated testing using Google Test, JUnit, and Maven framework through feature toggles
+				\item Reduced build time by decomposing product through discussions about architecture with project leads
+				\item Integrated build into Jenkins pipeline to automate deployment, SCA, and testing on every deliverable
+				\item \ul{Leveraged knowledge} in Maven, Git, Jenkins, JUnit, Google Test, Java, C++
+			\end{itemize}
+	    \end{cvsubsection}
+		\begin{cvsubsection}{MicroOffice}{Software Developer}{Feb 2017 - Jan 2019}
+			\begin{itemize}
+				\item Built contract licensing and management system using PostgreSQL, Python, Flask, and Jinja
+				\item Integrated external desk management system with existing operations interface using web API calls
+				\item Updated payment portal to allow customers to make purchases independent of sales team
+				\item Automated operations visual reporting service to provide useful at-a-glance business metrics
+				\item \ul{Leveraged knowledge} in Full Stack Web development, Python, JavaScript, Git, PostgreSQL, Flask
+			\end{itemize}
+	    \end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Software Projects - \url{www.gitlab.com/saffathasan}}
+		\begin{cvsubsection}
+			{\href{https://gitlab.com/saffathasan/resume}{This Resume}}
+			{}
+			{Sept 2020 - Present}
+			\begin{itemize}
+				\item Automatically deploy master using ssh and rsync
+				\item Decouple data from style enabling multi-format generation using single YAML source
+				\item Generate PDF using LaTeX wrapped in Docker and Python templating engine
+				\item \ul{Utilized} Python, LaTeX, Docker, Gitlab CI
+			\end{itemize}
+	    \end{cvsubsection}
+		\begin{cvsubsection}
+			{\href{https://gitlab.com/saffathasan/se572}{Film Rating Microservice POC}}
+			{}
+			{June - Aug 2020}
+			\begin{itemize}
+				\item Architected simple yet highly decoupled IMDB clone
+				\item Designed each service to be independently deployable
+				\item Created web and client service consumers
+				\item \ul{Utilized} Flutter, GraphQL, Node.js, MongoDB, Docker Compose, JWT Authentication
+			\end{itemize}
+	    \end{cvsubsection}
+		\begin{cvsubsection}
+			{\href{https://gitlab.com/saffathasan/king-me}{King Me}}
+			{}
+			{Jan - June 2019}
+			\begin{itemize}
+				\item Designed online checkers game using Flask SocketIO to allow players to create and join games
+				\item Coordinated student team of four by creating mocked interfaces to enable concurrent development
+				\item Emphasized portability by utilizing Docker to standardize runtime environment
+				\item Enforced quality through use of Gitlab CI to automate static code analysis and testing
+				\item \ul{Utilized} Gitlab CI, Docker, Flask SocketIO, Jinja, Pytest, Pylint, JSHint
+			\end{itemize}
+	    \end{cvsubsection}
+	\end{cvsection}
+
+	% \begin{cvsection}{Activities}
+	% 	\begin{cvsubsection}{Dependency Analysis}{Independent Study}{Sept 2019 - Present}	
+	% 		\begin{itemize}
+	% 			\item Research quantification of software quality attributes such as maintainability using Decoupling Level metric
+	% 			\item Use of the open source tool Depends to model dependency structure of architectural components statically
+	% 			\item Attend Automated Software Engineering 2019 conference in San Diego
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% 	\begin{cvsubsection}{Peer Mentor}{}{Sept - Dec 2019}	
+	% 		\begin{itemize}
+	% 			\item Hosted coding competition to challenge students in a fun environment - \url{DrexelCCI.info/PMCodeGolf}
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% \end{cvsection}
+	
+	\begin{cvsection}{Technical Skills}
+		\begin{cvsubsection}{}{}{}	
+		    \begin{itemize}
+				\item \textbf{Proficient}: Java, Python, Unix, Git, SQL, JavaScript, Maven, Flask, Pytest, Pylint, HTML/CSS
+				\item \textbf{Familiar}: C++, C, Docker, LXC, SaltStack, Jenkins, Node.js
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+\end{document}
