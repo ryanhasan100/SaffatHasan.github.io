@@ -23,7 +23,11 @@
 
 	% Print the header
 	\makeheader
-		{\href{https://\VAR{contact.repo}}{\VAR{contact.repo}} \linebreak \href{https://\VAR{contact.linkedin}}{\VAR{contact.linkedin}}}
+		{
+			\href{https://\VAR{contact.github}}{\VAR{contact.github}}
+			\href{https://\VAR{contact.gitlab}}{\VAR{contact.gitlab}}
+			\href{https://\VAR{contact.linkedin}}{\VAR{contact.linkedin}}
+		}
 		{\VAR{contact.name}}
 		{\VAR{contact.phone} \linebreak \href{mailto:\VAR{contact.email}}{\VAR{contact.email}}}
 	
