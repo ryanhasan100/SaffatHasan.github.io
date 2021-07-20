@@ -1,7 +1,6 @@
 IMAGE=blang/latex:ubuntu
 WORKDIR=/data
 
-
 run: dist/resume-simple.pdf dist/resume.pdf
 
 watch:
@@ -16,11 +15,11 @@ dist/resume-simple.pdf: dist/resume-simple.tex dist
 dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls
 	docker run --rm -v "${PWD}/dist:${WORKDIR}" "${IMAGE}" lualatex resume.tex | tail -n2
 
-dist/resume-simple.tex: src/main.py templates/resume-simple.tex resources/data.yml
-	python src/main.py resume-simple
+dist/resume-simple.tex: src/main.py templates/resume-simple.tex resources/data.yml venv
+	venv/Scripts/python src/main.py resume-simple
 
-dist/resume.tex: src/main.py templates/resume.tex resources/data.yml
-	python src/main.py resume
+dist/resume.tex: src/main.py templates/resume.tex resources/data.yml venv
+	venv/Scripts/python src/main.py resume
 
 dist/mcdowellcv.cls: resources/mcdowellcv.cls
 	mkdir -p dist
