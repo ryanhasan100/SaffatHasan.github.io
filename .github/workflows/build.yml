@@ -1,0 +1,40 @@
+name: build
+
+on: [push]
+
+jobs:
+  generate-sources:
+    runs-on: ubuntu-latest
+    container: python:3.8
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip install -r src/requirements.txt
+      - run: python src/main.py resume
+      - run: python src/main.py resume-simple
+      - name: upload generated latex
+        uses: actions/upload-artifact@v2
+        with:
+          name: generate-sources-artifacts
+          path: dist/
+
+  generate-resume:
+    runs-on: ubuntu-latest
+    container: blang/latex:ubuntu
+    needs: generate-sources
+    steps:
+      - uses: actions/checkout@v2
+      - name: copy artifact from generate-sources-artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: generate-sources-artifacts
+          path: dist/
+      - run: cp resources/mcdowellcv.cls dist
+      - run: lualatex resume.tex
+        working-directory: dist/
+      - run: lualatex resume-simple.tex
+        working-directory: dist/
+      - name: upload generated pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: generate-sources-artifacts
+          path: dist/
