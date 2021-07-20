@@ -18,14 +18,12 @@ This project contains the code to generate `Saffat Hasan`'s resume.
 
 ## What This Project Accomplishes
 
-I've achieved an OK level of decoupling of data from formatting. You can see that there are two different formats:
+I've achieved a reasonable level of decoupling of data from formatting (data _structure_ is still coupled). You can see that there are two different formats:
 
 - `templates/resume.tex`
 - `templates/resume-simple.tex`
 
-This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the `gh-pages` branch of this repository.
-
-Prior, the `.gitlab-ci.yml` file was used to automatically deploy to my Drexel hosted public folder, but has since been refactored.
+This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the `gh-pages` branch of this repository as well as to [Drexel's student servers (tux)](https://www.cs.drexel.edu/~sh3292/resume.pdf).
 
 ## Folder Structure
 
