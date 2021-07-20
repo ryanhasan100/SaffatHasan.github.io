@@ -23,9 +23,9 @@ I've achieved an OK level of decoupling of data from formatting. You can see tha
 - `templates/resume.tex`
 - `templates/resume-simple.tex`
 
-This project also leverages Gitlab-CI to automatically generate the PDFs as build artifacts.
+This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the `gh-pages` branch of this repository.
 
-Additionally, this project automatically deploys the PDF output to my account at Drexel so the live result of pipelines can be seen [here](https://www.cs.drexel.edu/~sh3292/resume.pdf). I'm very pleased with the 0 touch deployment.
+Prior, the `.gitlab-ci.yml` file was used to automatically deploy to my Drexel hosted public folder, but has since been refactored.
 
 ## Folder Structure
 
