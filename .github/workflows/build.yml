@@ -42,6 +42,7 @@ jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
     needs: generate-resume
+    if: github.ref == 'refs/head/main'
 
     steps:
       - uses: actions/checkout@v2
