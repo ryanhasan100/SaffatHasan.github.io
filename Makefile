@@ -25,9 +25,6 @@ dist/mcdowellcv.cls: resources/mcdowellcv.cls
 	mkdir -p dist
 	cp resources/mcdowellcv.cls dist/mcdowellcv.cls
 
-debug:
-	docker run -ti -v "${PWD}/:${WORKDIR}" python sh
-
 venv: src/requirements.txt
 	py -m venv venv
 	venv/Scripts/pip install -r src/requirements.txt
