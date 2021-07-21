@@ -25,6 +25,10 @@ I've achieved a reasonable level of decoupling of data from formatting (data _st
 
 This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the `gh-pages` branch of this repository as well as to [Drexel's student servers (tux)](https://www.cs.drexel.edu/~sh3292/resume.pdf).
 
+## How to Build
+
+See [docs/build.md](docs/build.md)
+
 ## Folder Structure
 
 - `templates` contains the template to be rendered
