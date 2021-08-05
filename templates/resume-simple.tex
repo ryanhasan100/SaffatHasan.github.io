@@ -26,16 +26,7 @@
 
 
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
 \usepackage{mathptmx}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
 
 %-------------LINKS---------------
 \usepackage{hyperref}
@@ -117,11 +108,6 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
     \textbf{\Huge \scshape \VAR{contact.name}} \\ \vspace{1pt}
     \small \VAR{contact.phone} $|$ \href{mailto:\VAR{contact.email}}{\ul{\VAR{contact.email}}} $|$
@@ -166,7 +152,6 @@
     \resumeSubHeadingListStart
       %% for project in projects
       \resumeProjectHeading
-          % {\textbf{\VAR{project.name}}}{\VAR{project.duration}}
           {\href{\VAR{project.url}}{\textbf{\VAR{project.name}}}}
           {\VAR{project.duration}}
           \resumeItemListStart
@@ -186,10 +171,6 @@
     \small{\item{
       \textbf{Proficient}: \VAR{skills.proficient |join(', ')} \\
       \textbf{Familiar}: \VAR{skills.familiar|join(', ')}
-    %  \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-    %  \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-    %  \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-    %  \textbf{Libraries}{: pandas, NumPy, Matplotlib}
     }}
  \end{itemize}
 
