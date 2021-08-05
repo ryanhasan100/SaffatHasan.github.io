@@ -42,7 +42,7 @@ jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
     needs: generate-pdf-files
-    if: github.ref == 'refs/head/main'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v2
@@ -61,7 +61,7 @@ jobs:
   deploy-to-drexel:
     runs-on: ubuntu-latest
     needs: generate-pdf-files
-    if: github.ref == 'refs/head/main'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v2
