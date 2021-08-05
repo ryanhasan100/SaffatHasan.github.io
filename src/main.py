@@ -58,7 +58,7 @@ def get_template(template_file):
 
 
 def render_template_to_file(template, output_file):
-    """ takes a template and path and outputs the rendered resume
+    """ Takes a template and path and outputs the rendered resume
 
     ARGS:
         template(Jinja2.Template): template to be rendered to
@@ -71,7 +71,7 @@ def render_template_to_file(template, output_file):
 
 
 def get_data():
-    """ get_data
+    """ Returns the dictionary representation of the `resources/data.yml` file
 
     RETURNS:
         key/value pairs of data
