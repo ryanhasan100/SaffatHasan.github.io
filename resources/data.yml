@@ -20,12 +20,12 @@ education:
       - "Graduate Coursework: Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
       - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
     description: "B.S./M.S. in Computer Science | GPA: 3.66"
-  - name: Queensborough C.C.
-    location: Queens, NY
-    graduation: May 2017
-    summary_items:
-      - "A.S. Computer Science emphasis | GPA: 3.97"
-    description: "A.S. Computer Science emphasis | GPA: 3.97"
+#   - name: Queensborough C.C.
+#     location: Queens, NY
+#     graduation: May 2017
+#     summary_items:
+#       - "A.S. Computer Science emphasis | GPA: 3.97"
+#     description: "A.S. Computer Science emphasis | GPA: 3.97"
 
 experience:
   - employer: Google
