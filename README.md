@@ -36,7 +36,13 @@ See [docs/build.md](docs/build.md)
 - `src` contains Python code that renders `templates` to `tex` files
 - `Makefile` contains a single `run` target which generates resumes locally
 
-### Credits
+## License
+
+`resources/data.yml` is owned by me. Please do not use except as a template.
+
+All other code under MIT.
+
+## Credits
 
 `templates/resume-simple.tex` Thanks to [@jakeryank](https://github.com/jakeryang/resume) and [@sb2nov](https://github.com/sb2nov/resume/)
 
