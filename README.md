@@ -14,7 +14,7 @@ This project contains the code to generate `Saffat Hasan`'s resume.
 
 - I disliked writing Latex AND writing fancy summary bullets
 - I had no (good) way to keep track of old resumes
-- I fell into the sunken cost fallacy. I guess I got it working?
+- I fell into the sunken cost fallacy.
 
 ## What This Project Accomplishes
 
