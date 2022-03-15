@@ -33,9 +33,10 @@ experience:
     title: Software Engineer
     duration: December 2021 - Present
     summary_items:
-      - Implemented unit tests for customer self-service onboarding CLI tool to meet 48 hour SLO
+      - Automated customer onboarding to instrumentation tooling using CLI to meet 48 hour SLO
     skills:
       - Go
+      - Java
   - employer: Cigna
     location: Philadelphia, PA
     title: Software Engineer
