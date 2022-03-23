@@ -31,7 +31,7 @@ experience:
   - employer: Google
     location: New York, NY
     title: Software Engineer
-    duration: December 2021 - Present
+    duration: Dec 2021 - Present
     summary_items:
       - Automated customer onboarding to instrumentation tooling using CLI to meet 48 hour SLO
     skills:
@@ -40,7 +40,7 @@ experience:
   - employer: Cigna
     location: Philadelphia, PA
     title: Software Engineer
-    duration: Apr 2020 - November 2021
+    duration: Apr 2020 - Nov 2021
     summary_items:
       - Developed incremental deployment strategies to drive service mesh adoption using Gloo
       - Refactored Jenkins library to use K8s native pipeline (Tekton) for efficiency, speed, \& scalability
