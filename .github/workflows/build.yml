@@ -51,8 +51,6 @@ jobs:
         with:
           name: generate-pdf-artifacts
           path: publish/
-      - name: copy resume-simple to index.html for direct link access
-        run: cp publish/resume-simple.pdf publish/index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
