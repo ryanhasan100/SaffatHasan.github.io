@@ -17,10 +17,10 @@ dist/resume.pdf: dist/resume.tex dist/mcdowellcv.cls
 	docker run --rm -v "${PWD}/dist:${WORKDIR}" "${LATEX_IMAGE}" lualatex resume.tex | tail -n2
 
 dist/resume-simple.tex: python-builder templates/resume-simple.tex resources/data.yml
-	docker run -v "${PWD}:${WORKDIR}" "${PYTHON_IMAGE}" resume-simple
+	docker run --rm -v "${PWD}:${WORKDIR}" "${PYTHON_IMAGE}" resume-simple
 
 dist/resume.tex: python-builder templates/resume.tex resources/data.yml
-	docker run -v "${PWD}:${WORKDIR}" "${PYTHON_IMAGE}" resume
+	docker run --rm -v "${PWD}:${WORKDIR}" "${PYTHON_IMAGE}" resume
 
 dist/mcdowellcv.cls: resources/mcdowellcv.cls
 	mkdir -p dist
