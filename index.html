@@ -4,5 +4,15 @@
 	<meta name="description" content="Saffat Hasan's Resume">
 </head>
 <body style="margin: 0px; overflow: hidden">
-	<embed src="/resume-simple.pdf" width="99999" height="99999"/>
+	<div id="adobe-dc-view"></div>
+	<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+			var adobeDCView = new AdobeDC.View({clientId: "96a912242dc9404480bd2c3e7b2fc91e", divId: "adobe-dc-view"});
+			adobeDCView.previewFile({
+				content:{location: {url: "/resume-simple.pdf"}},
+				metaData:{fileName: "resume-simple.pdf"}
+			}, {});
+		});
+	</script>
 </body>
