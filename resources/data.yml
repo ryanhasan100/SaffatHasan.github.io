@@ -1,43 +1,35 @@
 contact:
-  name: Saffat Hasan
+  name: Ryan Hasan
   address:
     line1: xxx
     city: New York
     state: NY
     zip: 11423
   phone: (xxx) xxx-xxxx
-  email: saffathasan@gmail.com
+  email: ryanhasan100@gmail.com
   github: github.com/SaffatHasan
   gitlab: gitlab.com/SaffatHasan
-  linkedin: linkedin.com/in/saffat-hasan
+  linkedin: linkedin.com/in/RyanHasan
 
 education:
   - name: Drexel University
     location: Philadelphia, PA
-    graduation: March 2021
+    graduation: March 2024
     summary_items:
-      - "B.S./M.S. in Computer Science | GPA: 3.66"
-      - "Graduate Coursework: Test Driven Dev \\& eXtreme Prog; Web Services \\& Mobile Arch; Data Analysis at Scale."
-      - "Undergraduate Coursework: Software Architecture; Software Engineering; Software Evolution."
-    description: "B.S./M.S. in Computer Science | GPA: 3.66"
-#   - name: Queensborough C.C.
-#     location: Queens, NY
-#     graduation: May 2017
-#     summary_items:
-#       - "A.S. Computer Science emphasis | GPA: 3.97"
-#     description: "A.S. Computer Science emphasis | GPA: 3.97"
+      - "Undergraduate Majoring in Biology | GPA: X"
+      - ""
+      - ""
 
 experience:
-  - employer: Google
-    location: New York, NY
-    title: Software Engineer
-    duration: Dec 2021 - Present
+  - employer: Beta Chi Theta Incorperated
+    location: Pennsylvania, PA
+    title: Service Chair
+    duration: March 1 - Present
     summary_items:
-      - Automated customer onboarding to instrumentation tooling using CLI to meet 48 hour SLO
+      - Creating or scheduling events to help communities in need.
     skills:
-      - Go
-      - Java
-  - employer: Cigna
+      - Reaching out to form connections with other orgs
+  - employer: 
     location: Philadelphia, PA
     title: Software Engineer
     duration: Apr 2020 - Nov 2021
